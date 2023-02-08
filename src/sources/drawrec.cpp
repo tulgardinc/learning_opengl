@@ -40,7 +40,8 @@ int main() {
   // start defining what we will draw
 
   unsigned int VAO, VBO, EBO;
-  glGenVertexArrays(1, &VAO) glBindVertexArray(VAO);
+  glGenVertexArrays(1, &VAO);
+  glBindVertexArray(VAO);
 
   glGenBuffers(1, &VBO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
