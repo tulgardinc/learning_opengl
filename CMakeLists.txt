@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARDREQUIRED ON)
+set(OpenGL_GL_PREFERENCE GLVND)
+
+project(learnOpenGL VERSION 1.0)
+file(GLOB_RECURSE TOOL_FILES src/tools/*(.cpp|.c))
+file(GLOB_RECURSE SOURCE_FILES src/sources/*(.cpp|.c))
+find_package(OpenGL REQUIRED)
+find_package(glfw3 REQUIRED)
+
+foreach(SOURCE_PATH ${SOURCE_FILES})
+get_filename_component(EXECUTABLE_NAME ${SOURCE_PATH} NAME_WE)
+add_executable(${EXECUTABLE_NAME} ${SOURCE_PATH} ${TOOL_FILES})
+target_link_libraries(${EXECUTABLE_NAME} glfw OpenGL::GL)
+target_include_directories(${EXECUTABLE_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+endforeach(SOURCE_PATH ${SOURCE_FILES})
