@@ -15,14 +15,14 @@ int main() {
 
   // rectangle
   float vertices[] = {
+      -0.5f, 0.5f,  0.0f, // top left
       0.5f,  0.5f,  0.0f, // top right
-      0.5f,  -0.5f, 0.0f, // bottom right
       -0.5f, -0.5f, 0.0f, // bottom left
-      -0.5f, 0.5f,  0.0f  // top left
+      0.5f,  -0.5f, 0.0f, // bottom right
   };
   unsigned int indices[] = {
       // note that we start from 0!
-      0, 1, 3, // first Triangle
+      0, 1, 2, // first Triangle
       1, 2, 3  // second Triangle
   };
 
@@ -40,8 +40,7 @@ int main() {
   // start defining what we will draw
 
   unsigned int VAO, VBO, EBO;
-  glGenVertexArrays(1, &VAO);
-  glBindVertexArray(VAO);
+  glGenVertexArrays(1, &VAO) glBindVertexArray(VAO);
 
   glGenBuffers(1, &VBO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
