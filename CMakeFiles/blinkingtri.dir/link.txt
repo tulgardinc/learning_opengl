@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/blinkingtri.dir/src/sources/blinkingtri.cpp.o CMakeFiles/blinkingtri.dir/src/tools/glad/glad.c.o CMakeFiles/blinkingtri.dir/src/tools/objectdrawer.cpp.o CMakeFiles/blinkingtri.dir/src/tools/shader.cpp.o CMakeFiles/blinkingtri.dir/src/tools/stb_image.cpp.o -o blinkingtri  /usr/lib/libglfw.so.3.3 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 

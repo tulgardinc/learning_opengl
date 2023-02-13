@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/drawrec.dir/src/sources/drawrec.cpp.o CMakeFiles/drawrec.dir/src/tools/glad/glad.c.o CMakeFiles/drawrec.dir/src/tools/objectdrawer.cpp.o CMakeFiles/drawrec.dir/src/tools/shader.cpp.o CMakeFiles/drawrec.dir/src/tools/stb_image.cpp.o -o drawrec  /usr/lib/libglfw.so.3.3 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 
