@@ -1,0 +1,7 @@
+/home/ts/projects/cpp_projects/cmaketest/CMakeFiles/blinkingtri.dir
+/home/ts/projects/cpp_projects/cmaketest/CMakeFiles/colorfultri.dir
+/home/ts/projects/cpp_projects/cmaketest/CMakeFiles/drawrec.dir
+/home/ts/projects/cpp_projects/cmaketest/CMakeFiles/texturedRec.dir
+/home/ts/projects/cpp_projects/cmaketest/CMakeFiles/transformRec.dir
+/home/ts/projects/cpp_projects/cmaketest/CMakeFiles/edit_cache.dir
+/home/ts/projects/cpp_projects/cmaketest/CMakeFiles/rebuild_cache.dir

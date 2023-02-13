@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/transfromRec.dir/src/sources/transfromRec.cpp.o CMakeFiles/transfromRec.dir/src/tools/glad/glad.c.o CMakeFiles/transfromRec.dir/src/tools/objectdrawer.cpp.o CMakeFiles/transfromRec.dir/src/tools/shader.cpp.o CMakeFiles/transfromRec.dir/src/tools/stb_image.cpp.o -o transfromRec  /usr/lib/libglfw.so.3.3 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 

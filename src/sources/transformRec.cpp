@@ -58,14 +58,12 @@ int main() {
 
   // apply transfroms
   glm::mat4 trans = glm::mat4(1.0f);
-  trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 0.1));
+  trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
   trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
 
-  Shader shader("../shaders/texture.vert", "../shaders/texture.frag");
+  Shader shader("../shaders/transformRec.vert", "../shaders/texture.frag");
   shader.setMat4("transform", trans);
   shader.use();
-
-  // start defining what we will draw
 
   unsigned int VAO, VBO, EBO;
   glGenVertexArrays(1, &VAO);

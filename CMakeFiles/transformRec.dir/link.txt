@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/transformRec.dir/src/sources/transformRec.cpp.o CMakeFiles/transformRec.dir/src/tools/glad/glad.c.o CMakeFiles/transformRec.dir/src/tools/objectdrawer.cpp.o CMakeFiles/transformRec.dir/src/tools/shader.cpp.o CMakeFiles/transformRec.dir/src/tools/stb_image.cpp.o -o transformRec  /usr/lib/libglfw.so.3.3 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 
