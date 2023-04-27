@@ -48,7 +48,7 @@ int main() {
 
   int width, height, nrChannels;
   unsigned char *data =
-      stbi_load("../textures/container.jpg", &width, &height, &nrChannels, 0);
+      stbi_load("./textures/container.jpg", &width, &height, &nrChannels, 0);
 
   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB,
                GL_UNSIGNED_BYTE, data);
@@ -56,14 +56,10 @@ int main() {
 
   stbi_image_free(data);
 
-  // apply transfroms
-  glm::mat4 trans = glm::mat4(1.0f);
-  trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
-  trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
-
-  Shader shader("../shaders/transformRec.vert", "../shaders/texture.frag");
-  shader.setMat4("transform", trans);
+  Shader shader("./shaders/transformRec.vert", "./shaders/texture.frag");
   shader.use();
+
+  // start defining what we will draw
 
   unsigned int VAO, VBO, EBO;
   glGenVertexArrays(1, &VAO);
@@ -85,6 +81,8 @@ int main() {
                         (void *)(3 * sizeof(float)));
   glEnableVertexAttribArray(1);
 
+  // active the shader program
+
   // render loop
   while (!glfwWindowShouldClose(window)) {
     // input
@@ -96,6 +94,15 @@ int main() {
     glClear(GL_COLOR_BUFFER_BIT);
 
     // now render the elements
+    glm::mat4 trans = glm::mat4(1.0);
+    trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
+    trans = glm::scale(trans, glm::vec3(1.5, 1.5, 1.0));
+
+    shader.use();
+
+    unsigned int transformLoc = glGetUniformLocation(shader.ID, "transform");
+    glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
+
     glBindTexture(GL_TEXTURE_2D, texture);
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

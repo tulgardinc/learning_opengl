@@ -13,11 +13,11 @@
 #include <string>
 
 class Shader {
+
+public:
   // the program ID
   unsigned int ID;
-
   // constructor reads and builds the shader
-public:
   Shader(const char *vertexPath, const char *fragmentPath);
   // use/active shader
   void use();

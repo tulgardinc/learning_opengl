@@ -1,3 +1,4 @@
+#include <cstring>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
@@ -30,7 +31,8 @@ Shader::Shader(const char *vertexPath, const char *fragmentPath) {
     fragmentCode = fShaderStream.str();
 
   } catch (std::ifstream::failure e) {
-    std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
+    std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ " << e.what()
+              << std::endl;
   }
 
   const char *vShaderCode = vertexCode.c_str();

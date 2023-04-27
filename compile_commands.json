@@ -1,0 +1,16 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-I/home/ts/projects/cpp_projects/learning_opengl/include",
+      "-std=gnu++17",
+      "-c",
+      "-o",
+      "CMakeFiles/transformRec.dir/src/sources/transformRec.cpp.o",
+      "/home/ts/projects/cpp_projects/learning_opengl/src/sources/transformRec.cpp"
+    ],
+    "directory": "/home/ts/projects/cpp_projects/learning_opengl",
+    "file": "/home/ts/projects/cpp_projects/learning_opengl/src/sources/transformRec.cpp",
+    "output": "/home/ts/projects/cpp_projects/learning_opengl/CMakeFiles/transformRec.dir/src/sources/transformRec.cpp.o"
+  }
+]

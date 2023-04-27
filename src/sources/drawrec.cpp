@@ -34,7 +34,7 @@ int main() {
     return -1;
   }
 
-  Shader shader("../shaders/default.vert", "../shaders/default.frag");
+  Shader shader("./shaders/default.vert", "./shaders/default.frag");
   shader.use();
 
   // start defining what we will draw

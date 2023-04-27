@@ -44,7 +44,7 @@ int main() {
 
   int width, height, nrChannels;
   unsigned char *data =
-      stbi_load("../textures/container.jpg", &width, &height, &nrChannels, 0);
+      stbi_load("./textures/container.jpg", &width, &height, &nrChannels, 0);
 
   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB,
                GL_UNSIGNED_BYTE, data);
@@ -52,7 +52,7 @@ int main() {
 
   stbi_image_free(data);
 
-  Shader shader("../shaders/texture.vert", "../shaders/texture.frag");
+  Shader shader("./shaders/texture.vert", "./shaders/texture.frag");
   shader.use();
 
   // start defining what we will draw

@@ -26,7 +26,7 @@ int main() {
     return -1;
   }
 
-  Shader shader("../shaders/blinking.vert", "../shaders/blinking.frag");
+  Shader shader("./shaders/blinking.vert", "./shaders/blinking.frag");
   shader.use();
 
   // start defining what we will draw

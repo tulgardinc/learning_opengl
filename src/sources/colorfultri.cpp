@@ -26,7 +26,7 @@ int main() {
     return -1;
   }
 
-  Shader shader("../shaders/vertex.vert", "../shaders/fragment.frag");
+  Shader shader("./shaders/vertex.vert", "./shaders/fragment.frag");
   shader.use();
 
   // start defining what we will draw
