@@ -156,6 +156,19 @@ drawrec/fast:
 .PHONY : drawrec/fast
 
 #=============================================================================
+# Target rules for targets named going3d
+
+# Build rule for target.
+going3d: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 going3d
+.PHONY : going3d
+
+# fast build rule for target.
+going3d/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/build
+.PHONY : going3d/fast
+
+#=============================================================================
 # Target rules for targets named texturedRec
 
 # Build rule for target.
@@ -253,6 +266,30 @@ src/sources/drawrec.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/sources/drawrec.cpp.s
 .PHONY : src/sources/drawrec.cpp.s
 
+src/sources/going3d.o: src/sources/going3d.cpp.o
+.PHONY : src/sources/going3d.o
+
+# target to build an object file
+src/sources/going3d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/sources/going3d.cpp.o
+.PHONY : src/sources/going3d.cpp.o
+
+src/sources/going3d.i: src/sources/going3d.cpp.i
+.PHONY : src/sources/going3d.i
+
+# target to preprocess a source file
+src/sources/going3d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/sources/going3d.cpp.i
+.PHONY : src/sources/going3d.cpp.i
+
+src/sources/going3d.s: src/sources/going3d.cpp.s
+.PHONY : src/sources/going3d.s
+
+# target to generate assembly for a file
+src/sources/going3d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/sources/going3d.cpp.s
+.PHONY : src/sources/going3d.cpp.s
+
 src/sources/texturedRec.o: src/sources/texturedRec.cpp.o
 .PHONY : src/sources/texturedRec.o
 
@@ -309,6 +346,7 @@ src/tools/glad/glad.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/glad/glad.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/glad/glad.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/glad/glad.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/glad/glad.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/glad/glad.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/glad/glad.c.o
 .PHONY : src/tools/glad/glad.c.o
@@ -321,6 +359,7 @@ src/tools/glad/glad.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/glad/glad.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/glad/glad.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/glad/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/glad/glad.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/glad/glad.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/glad/glad.c.i
 .PHONY : src/tools/glad/glad.c.i
@@ -333,6 +372,7 @@ src/tools/glad/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/glad/glad.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/glad/glad.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/glad/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/glad/glad.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/glad/glad.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/glad/glad.c.s
 .PHONY : src/tools/glad/glad.c.s
@@ -345,6 +385,7 @@ src/tools/objectdrawer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/objectdrawer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/objectdrawer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/objectdrawer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/objectdrawer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/objectdrawer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/objectdrawer.cpp.o
 .PHONY : src/tools/objectdrawer.cpp.o
@@ -357,6 +398,7 @@ src/tools/objectdrawer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/objectdrawer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/objectdrawer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/objectdrawer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/objectdrawer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/objectdrawer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/objectdrawer.cpp.i
 .PHONY : src/tools/objectdrawer.cpp.i
@@ -369,6 +411,7 @@ src/tools/objectdrawer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/objectdrawer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/objectdrawer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/objectdrawer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/objectdrawer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/objectdrawer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/objectdrawer.cpp.s
 .PHONY : src/tools/objectdrawer.cpp.s
@@ -381,6 +424,7 @@ src/tools/shader.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/shader.cpp.o
 .PHONY : src/tools/shader.cpp.o
@@ -393,6 +437,7 @@ src/tools/shader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/shader.cpp.i
 .PHONY : src/tools/shader.cpp.i
@@ -405,6 +450,7 @@ src/tools/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/shader.cpp.s
 .PHONY : src/tools/shader.cpp.s
@@ -417,6 +463,7 @@ src/tools/stb_image.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/stb_image.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/stb_image.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/stb_image.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/stb_image.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/stb_image.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/stb_image.cpp.o
 .PHONY : src/tools/stb_image.cpp.o
@@ -429,6 +476,7 @@ src/tools/stb_image.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/stb_image.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/stb_image.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/stb_image.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/stb_image.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/stb_image.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/stb_image.cpp.i
 .PHONY : src/tools/stb_image.cpp.i
@@ -441,6 +489,7 @@ src/tools/stb_image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/stb_image.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/stb_image.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/stb_image.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/stb_image.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/stb_image.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/stb_image.cpp.s
 .PHONY : src/tools/stb_image.cpp.s
@@ -456,6 +505,7 @@ help:
 	@echo "... blinkingtri"
 	@echo "... colorfultri"
 	@echo "... drawrec"
+	@echo "... going3d"
 	@echo "... texturedRec"
 	@echo "... transformRec"
 	@echo "... src/sources/blinkingtri.o"
@@ -467,6 +517,9 @@ help:
 	@echo "... src/sources/drawrec.o"
 	@echo "... src/sources/drawrec.i"
 	@echo "... src/sources/drawrec.s"
+	@echo "... src/sources/going3d.o"
+	@echo "... src/sources/going3d.i"
+	@echo "... src/sources/going3d.s"
 	@echo "... src/sources/texturedRec.o"
 	@echo "... src/sources/texturedRec.i"
 	@echo "... src/sources/texturedRec.s"
