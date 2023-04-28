@@ -1,16 +1,1 @@
-[
-  {
-    "arguments": [
-      "/usr/bin/c++",
-      "-I/home/ts/projects/cpp_projects/learning_opengl/include",
-      "-std=gnu++17",
-      "-c",
-      "-o",
-      "CMakeFiles/going3d.dir/src/sources/going3d.cpp.o",
-      "/home/ts/projects/cpp_projects/learning_opengl/src/sources/going3d.cpp"
-    ],
-    "directory": "/home/ts/projects/cpp_projects/learning_opengl",
-    "file": "/home/ts/projects/cpp_projects/learning_opengl/src/sources/going3d.cpp",
-    "output": "/home/ts/projects/cpp_projects/learning_opengl/CMakeFiles/going3d.dir/src/sources/going3d.cpp.o"
-  }
-]
+[]

@@ -6,6 +6,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "camera.h"
 #include "glm/ext/matrix_clip_space.hpp"
 #include "glm/ext/matrix_transform.hpp"
 #include "objectdrawer.h"
@@ -100,19 +101,26 @@ int main() {
 
   glEnable(GL_DEPTH_TEST);
 
+  // CAMERA SETUP
+  glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+  glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+  glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
+  // memroy heap stuff idk c++
+  Camera camera = Camera(cameraPos, cameraFront, cameraUp);
+
   // render loop
   while (!glfwWindowShouldClose(window)) {
     // input
-    ObjectDrawer::processInput(window);
+    ObjectDrawer::processInput(window, &camera);
 
     // rendering commands
     // clear the colorbuffer
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    // now render the elements
-    glm::mat4 view = glm::mat4(1.0);
-    view = glm::translate(view, glm::vec3(0.0, 0.0, -3.0));
+    // CAMERA ROUTE
+    glm::mat4 view = glm::mat4(1);
+    view = glm::lookAt(camera.pos, camera.pos + camera.forward, camera.up);
 
     glm::mat4 projection = glm::mat4(1.0);
     projection =

@@ -130,6 +130,32 @@ blinkingtri/fast:
 .PHONY : blinkingtri/fast
 
 #=============================================================================
+# Target rules for targets named cameraWithInput
+
+# Build rule for target.
+cameraWithInput: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cameraWithInput
+.PHONY : cameraWithInput
+
+# fast build rule for target.
+cameraWithInput/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/build
+.PHONY : cameraWithInput/fast
+
+#=============================================================================
+# Target rules for targets named cameraWithMotion
+
+# Build rule for target.
+cameraWithMotion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cameraWithMotion
+.PHONY : cameraWithMotion
+
+# fast build rule for target.
+cameraWithMotion/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/build
+.PHONY : cameraWithMotion/fast
+
+#=============================================================================
 # Target rules for targets named colorfultri
 
 # Build rule for target.
@@ -217,6 +243,54 @@ src/sources/blinkingtri.s: src/sources/blinkingtri.cpp.s
 src/sources/blinkingtri.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/sources/blinkingtri.cpp.s
 .PHONY : src/sources/blinkingtri.cpp.s
+
+src/sources/cameraWithInput.o: src/sources/cameraWithInput.cpp.o
+.PHONY : src/sources/cameraWithInput.o
+
+# target to build an object file
+src/sources/cameraWithInput.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/sources/cameraWithInput.cpp.o
+.PHONY : src/sources/cameraWithInput.cpp.o
+
+src/sources/cameraWithInput.i: src/sources/cameraWithInput.cpp.i
+.PHONY : src/sources/cameraWithInput.i
+
+# target to preprocess a source file
+src/sources/cameraWithInput.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/sources/cameraWithInput.cpp.i
+.PHONY : src/sources/cameraWithInput.cpp.i
+
+src/sources/cameraWithInput.s: src/sources/cameraWithInput.cpp.s
+.PHONY : src/sources/cameraWithInput.s
+
+# target to generate assembly for a file
+src/sources/cameraWithInput.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/sources/cameraWithInput.cpp.s
+.PHONY : src/sources/cameraWithInput.cpp.s
+
+src/sources/cameraWithMotion.o: src/sources/cameraWithMotion.cpp.o
+.PHONY : src/sources/cameraWithMotion.o
+
+# target to build an object file
+src/sources/cameraWithMotion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/sources/cameraWithMotion.cpp.o
+.PHONY : src/sources/cameraWithMotion.cpp.o
+
+src/sources/cameraWithMotion.i: src/sources/cameraWithMotion.cpp.i
+.PHONY : src/sources/cameraWithMotion.i
+
+# target to preprocess a source file
+src/sources/cameraWithMotion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/sources/cameraWithMotion.cpp.i
+.PHONY : src/sources/cameraWithMotion.cpp.i
+
+src/sources/cameraWithMotion.s: src/sources/cameraWithMotion.cpp.s
+.PHONY : src/sources/cameraWithMotion.s
+
+# target to generate assembly for a file
+src/sources/cameraWithMotion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/sources/cameraWithMotion.cpp.s
+.PHONY : src/sources/cameraWithMotion.cpp.s
 
 src/sources/colorfultri.o: src/sources/colorfultri.cpp.o
 .PHONY : src/sources/colorfultri.o
@@ -338,12 +412,59 @@ src/sources/transformRec.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/sources/transformRec.cpp.s
 .PHONY : src/sources/transformRec.cpp.s
 
+src/tools/camera.o: src/tools/camera.cpp.o
+.PHONY : src/tools/camera.o
+
+# target to build an object file
+src/tools/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/camera.cpp.o
+.PHONY : src/tools/camera.cpp.o
+
+src/tools/camera.i: src/tools/camera.cpp.i
+.PHONY : src/tools/camera.i
+
+# target to preprocess a source file
+src/tools/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/camera.cpp.i
+.PHONY : src/tools/camera.cpp.i
+
+src/tools/camera.s: src/tools/camera.cpp.s
+.PHONY : src/tools/camera.s
+
+# target to generate assembly for a file
+src/tools/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/texturedRec.dir/build.make CMakeFiles/texturedRec.dir/src/tools/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transformRec.dir/build.make CMakeFiles/transformRec.dir/src/tools/camera.cpp.s
+.PHONY : src/tools/camera.cpp.s
+
 src/tools/glad/glad.o: src/tools/glad/glad.c.o
 .PHONY : src/tools/glad/glad.o
 
 # target to build an object file
 src/tools/glad/glad.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/glad/glad.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/glad/glad.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/glad/glad.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/glad/glad.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/glad/glad.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/glad/glad.c.o
@@ -357,6 +478,8 @@ src/tools/glad/glad.i: src/tools/glad/glad.c.i
 # target to preprocess a source file
 src/tools/glad/glad.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/glad/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/glad/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/glad/glad.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/glad/glad.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/glad/glad.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/glad/glad.c.i
@@ -370,6 +493,8 @@ src/tools/glad/glad.s: src/tools/glad/glad.c.s
 # target to generate assembly for a file
 src/tools/glad/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/glad/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/glad/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/glad/glad.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/glad/glad.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/glad/glad.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/glad/glad.c.s
@@ -383,6 +508,8 @@ src/tools/objectdrawer.o: src/tools/objectdrawer.cpp.o
 # target to build an object file
 src/tools/objectdrawer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/objectdrawer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/objectdrawer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/objectdrawer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/objectdrawer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/objectdrawer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/objectdrawer.cpp.o
@@ -396,6 +523,8 @@ src/tools/objectdrawer.i: src/tools/objectdrawer.cpp.i
 # target to preprocess a source file
 src/tools/objectdrawer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/objectdrawer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/objectdrawer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/objectdrawer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/objectdrawer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/objectdrawer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/objectdrawer.cpp.i
@@ -409,6 +538,8 @@ src/tools/objectdrawer.s: src/tools/objectdrawer.cpp.s
 # target to generate assembly for a file
 src/tools/objectdrawer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/objectdrawer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/objectdrawer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/objectdrawer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/objectdrawer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/objectdrawer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/objectdrawer.cpp.s
@@ -422,6 +553,8 @@ src/tools/shader.o: src/tools/shader.cpp.o
 # target to build an object file
 src/tools/shader.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/shader.cpp.o
@@ -435,6 +568,8 @@ src/tools/shader.i: src/tools/shader.cpp.i
 # target to preprocess a source file
 src/tools/shader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/shader.cpp.i
@@ -448,6 +583,8 @@ src/tools/shader.s: src/tools/shader.cpp.s
 # target to generate assembly for a file
 src/tools/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/shader.cpp.s
@@ -461,6 +598,8 @@ src/tools/stb_image.o: src/tools/stb_image.cpp.o
 # target to build an object file
 src/tools/stb_image.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/stb_image.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/stb_image.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/stb_image.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/stb_image.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/stb_image.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/stb_image.cpp.o
@@ -474,6 +613,8 @@ src/tools/stb_image.i: src/tools/stb_image.cpp.i
 # target to preprocess a source file
 src/tools/stb_image.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/stb_image.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/stb_image.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/stb_image.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/stb_image.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/stb_image.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/stb_image.cpp.i
@@ -487,6 +628,8 @@ src/tools/stb_image.s: src/tools/stb_image.cpp.s
 # target to generate assembly for a file
 src/tools/stb_image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blinkingtri.dir/build.make CMakeFiles/blinkingtri.dir/src/tools/stb_image.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithInput.dir/build.make CMakeFiles/cameraWithInput.dir/src/tools/stb_image.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cameraWithMotion.dir/build.make CMakeFiles/cameraWithMotion.dir/src/tools/stb_image.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/colorfultri.dir/build.make CMakeFiles/colorfultri.dir/src/tools/stb_image.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drawrec.dir/build.make CMakeFiles/drawrec.dir/src/tools/stb_image.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/going3d.dir/build.make CMakeFiles/going3d.dir/src/tools/stb_image.cpp.s
@@ -503,6 +646,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... blinkingtri"
+	@echo "... cameraWithInput"
+	@echo "... cameraWithMotion"
 	@echo "... colorfultri"
 	@echo "... drawrec"
 	@echo "... going3d"
@@ -511,6 +656,12 @@ help:
 	@echo "... src/sources/blinkingtri.o"
 	@echo "... src/sources/blinkingtri.i"
 	@echo "... src/sources/blinkingtri.s"
+	@echo "... src/sources/cameraWithInput.o"
+	@echo "... src/sources/cameraWithInput.i"
+	@echo "... src/sources/cameraWithInput.s"
+	@echo "... src/sources/cameraWithMotion.o"
+	@echo "... src/sources/cameraWithMotion.i"
+	@echo "... src/sources/cameraWithMotion.s"
 	@echo "... src/sources/colorfultri.o"
 	@echo "... src/sources/colorfultri.i"
 	@echo "... src/sources/colorfultri.s"
@@ -526,6 +677,9 @@ help:
 	@echo "... src/sources/transformRec.o"
 	@echo "... src/sources/transformRec.i"
 	@echo "... src/sources/transformRec.s"
+	@echo "... src/tools/camera.o"
+	@echo "... src/tools/camera.i"
+	@echo "... src/tools/camera.s"
 	@echo "... src/tools/glad/glad.o"
 	@echo "... src/tools/glad/glad.i"
 	@echo "... src/tools/glad/glad.s"

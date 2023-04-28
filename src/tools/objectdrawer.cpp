@@ -2,6 +2,7 @@
 
 #include <GLFW/glfw3.h>
 
+#include "camera.h"
 #include <iostream>
 #include <objectdrawer.h>
 
@@ -37,7 +38,33 @@ void ObjectDrawer::framebufferSizeCallback(GLFWwindow *window, int width,
   glViewport(0, 0, width, height);
 }
 
+void ObjectDrawer::processInput(GLFWwindow *window, Camera *camera) {
+  const float cameraSpeed = 0.05f;
+  if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
+    glfwSetWindowShouldClose(window, true);
+  }
+  if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+    camera->pos.z -= cameraSpeed;
+  }
+  if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+    camera->pos.z += cameraSpeed;
+  }
+  if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+    camera->pos.x += cameraSpeed;
+  }
+  if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+    camera->pos.x -= cameraSpeed;
+  }
+  if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+    camera->pos.y += cameraSpeed;
+  }
+  if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) {
+    camera->pos.y -= cameraSpeed;
+  }
+}
+
 void ObjectDrawer::processInput(GLFWwindow *window) {
+  const float cameraSpeed = 0.05f;
   if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
     glfwSetWindowShouldClose(window, true);
   }
